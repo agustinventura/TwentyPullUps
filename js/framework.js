@@ -1,5 +1,11 @@
 function hideAllScreens() {
-	
+	$("#welcomeScreen").hide();
+	$("#testScreen").hide();
+	$("#pullUpsScreen").hide();
+	$("#pauseScreen").hide();
+	$("#setScreen").hide();
+	$("#restScreen").hide();
+	$("#endScreen").hide();
 }
 
 function setClickListener(element, listener) {
@@ -31,21 +37,35 @@ function goBack(activeDivId) {
 		case "welcomeScreen":
 			exit();
 			break;
-		case "sessionScreen":
-			showEndSessionScreen();
+		case "testScreen":
+			showWelcomeScreen();
 			break;
-		case "endSessionScreen":
-			sessionResume();
+		case "pullUpsScreen":
+			showTestScreen();
 			break;
-		case "sessionReviewScreen":
-			hideSessionReviewScreen();
+		case "setScreen":
+			showPauseScreen(activeDivId);
 			break;
-		case "previousSessionsScreen":
+		case "restScreenScreen":
+			restPause(activeDivId);
+			break;
+		case "pauseScreen":
+			pauseResume(activeDivId);
+			break;
+		case "endScreen":
 			showWelcomeScreen();
 			break;
 	}
 }
 
 function exit() {
+	tizen.power.release("SCREEN");
+	tizen.humanactivitymonitor.stop('HRM');
     tizen.application.getCurrentApplication().exit();
+}
+
+function hrmListener(hrmInfo) {
+	var currentHeartRate = preprendZerosIfNeeded(hrmInfo.heartRate, 3);
+	$("#setBPM").text(currentHeartRate);
+	$("#restBPM").text(currentHeartRate);
 }

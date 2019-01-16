@@ -208,6 +208,13 @@ body {
     text-align: center;
 }
 
+.txt-center {
+	font-size: 32px;
+    font-weight: bold;
+    width: 80%;
+    text-align: center;
+}
+
 .txt-msg-bpm {
 	font-size: 48px;
 	font-weight: bold;
