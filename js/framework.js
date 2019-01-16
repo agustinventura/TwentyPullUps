@@ -2,6 +2,7 @@ function hideAllScreens() {
 	$("#welcomeScreen").hide();
 	$("#testScreen").hide();
 	$("#pullUpsScreen").hide();
+	$("#testEndScreen").hide();
 	$("#pauseScreen").hide();
 	$("#setScreen").hide();
 	$("#restScreen").hide();
@@ -43,6 +44,9 @@ function goBack(activeDivId) {
 		case "pullUpsScreen":
 			showTestScreen();
 			break;
+		case "testEndScreen":
+			showWelcomeScreen();
+			break;
 		case "setScreen":
 			showPauseScreen(activeDivId);
 			break;
@@ -68,4 +72,16 @@ function hrmListener(hrmInfo) {
 	var currentHeartRate = preprendZerosIfNeeded(hrmInfo.heartRate, 3);
 	$("#setBPM").text(currentHeartRate);
 	$("#restBPM").text(currentHeartRate);
+}
+
+function getIntFromLocalStorage(key) {
+	var value = parseInt(localStorage.getItem(key));
+	if (isNaN(value)) {
+		value = 0;
+	}
+	return value;
+}
+
+function saveIntToLocalStorage(key, value) {
+	localStorage.setItem(key, value);
 }
