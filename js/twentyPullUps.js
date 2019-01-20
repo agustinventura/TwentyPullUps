@@ -40,7 +40,7 @@ function init() {
 		showTestScreen();
 	} else {
 		set = 1;
-		showSetScreen();
+		showSessionScreen();
 	}
 }
 

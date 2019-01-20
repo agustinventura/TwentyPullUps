@@ -246,6 +246,10 @@ body {
 	padding-top: 20px;
 }
 
+.numberWithArrows {
+	width: 100%;	
+}
+
 .numberWithArrows td {
 	width: 100%;
 }

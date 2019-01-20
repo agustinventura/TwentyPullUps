@@ -4,6 +4,7 @@ function hideAllScreens() {
 	$("#pullUpsScreen").hide();
 	$("#testEndScreen").hide();
 	$("#pauseScreen").hide();
+	$("#sessionScreen").hide();
 	$("#setScreen").hide();
 	$("#restScreen").hide();
 	$("#endScreen").hide();
