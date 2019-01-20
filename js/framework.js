@@ -39,13 +39,13 @@ function goBack(activeDivId) {
 			exit();
 			break;
 		case "testScreen":
-			showWelcomeScreen();
+			init();
 			break;
 		case "pullUpsScreen":
 			showTestScreen();
 			break;
 		case "testEndScreen":
-			showWelcomeScreen();
+			init();
 			break;
 		case "setScreen":
 			showPauseScreen(activeDivId);
@@ -57,7 +57,7 @@ function goBack(activeDivId) {
 			pauseResume(activeDivId);
 			break;
 		case "endScreen":
-			showWelcomeScreen();
+			init();
 			break;
 	}
 }

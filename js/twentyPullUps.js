@@ -27,6 +27,7 @@ LevelEnum = {
 }
 var currentLevel = null;
 var pullUps = 0;
+var set = 1;
 
 function init() {
 	setBackKeyListener();
@@ -38,7 +39,8 @@ function init() {
 	} else if (day === 10) {
 		showTestScreen();
 	} else {
-		//showSetScreen();
+		set = 1;
+		showSetScreen();
 	}
 }
 
