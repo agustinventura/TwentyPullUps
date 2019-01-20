@@ -20,19 +20,26 @@
 <body>
     <div id="welcomeScreen" class="clock">
         <div class="container">
-            <div class="txt">
-                <p class="txt-msg">Bienvenido al reto de las 20 dominadas.</p>
-                <p class="txt-explain">Al terminar este programa de 6 semanas podrás hacer 20 dominadas.</p>
-                <p class="txt-explain">Cada semana consta de 3 días. Descansa al menos un día en el medio.</p>
-                <p class="txt-explain">Cada día consta de 5 series, deberás descansar por lo menos 120 segundos entre series.</p>
+            <div class="txt-no-title">
+                <div class="txt-no-title-title">
+                    <p class="txt-msg">Bienvenido al reto de las 20 dominadas.</p>
+                </div>
+                <div class="txt-alone">
+                    <p class="txt-explain">Al terminar este programa de 6 semanas podrás hacer 20 dominadas.</p>
+                    <p class="txt-explain">Cada semana consta de 3 días. Descansa al menos un día en el medio.</p>
+                    <p class="txt-explain">Cada día consta de 5 series, deberás descansar por lo menos 120 segundos entre series.</p>
+                </div>
             </div>
-            <button id="introDone" class="btnbottom">Entendido</button>
         </div>
+        <button id="introDone" class="btnbottom">Entendido</button>
+    </div>
     </div>
     <div id="testScreen" class="clock">
         <div class="container">
             <div class="txt">
-                <p class="txt-msg">Ahora haz todas las dominadas que puedas con buena técnica y apúntalas en la siguiente pantalla.</p>
+            	<div class="txt-no-title-title">
+                	<p class="txt-msg">Ahora haz todas las dominadas que puedas con buena técnica y apúntalas en la siguiente pantalla.</p>
+                </div>
             </div>
             <button id="testDone" class="btnbottom">Hechas</button>
         </div>
@@ -48,38 +55,45 @@
                     <img id="increasePullUpsArrow" src="./img/increase.png" alt="Increase Pull Ups" />
                 </div>
             </div>
-            <table class="numberWithArrows">
-                <tr>
-                    <td>
-                        <img id="upArrowPullUps" src="./img/up.png" alt="Increase Pull Ups" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="pullUpsCounter"><span id="pullUps">0</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img id="downArrowPullUps" src="./img/down.png" alt="Decrease Pull Ups" />
-                    </td>
-                    <td></td>
-                </tr>
-            </table>
+            <div class="txt">
+                <table class="numberWithArrows">
+                    <tr>
+                        <td>
+                            <img id="upArrowPullUps" src="./img/up.png" alt="Increase Pull Ups" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pullUpsCounter"><span id="pullUps">0</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img id="downArrowPullUps" src="./img/down.png" alt="Decrease Pull Ups" />
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
             <button id="pullUpsDone" class="btnbottom">Ya</button>
         </div>
     </div>
     <div id="testEndScreen" class="clock">
         <div class="container">
-            <div class="txt-center">
-                <p>Ya sabemos tu nivel actual. Descansa y el próximo día empezamos con tu plan personalizado.</p>
+            <div class="txt">
+            	<div class="txt-no-title-title">
+                	<p class="txt-msg">Ya sabemos tu nivel actual.</p>
+                	<p class="txt-msg">Descansa y el próximo día empezamos con tu plan personalizado.</p>
+                </div>
             </div>
         </div>
     </div>
     <div id="pauseScreen" class="clock">
         <div class="container">
             <button id="endDay" class="btnleft">Si</button>
-            <div class="txt-msg-center">
-                ¿Has terminado? Este día no cuenta.
+            <div class="txt">
+                <div class="txt-msg-center">
+                    ¿Has terminado? Este día no cuenta.
+                </div>
             </div>
             <button id="continueDay" class="btnright">No</button>
         </div>
@@ -104,11 +118,13 @@
                     <img id="increaseSet" src="./img/increase.png" alt="End set" />
                 </div>
             </div>
-            <div class="pullUpsCounter">
-                <span id="setPullUps">00</span>
-            </div>
-            <div class="txt-msg-bpm">
-                <span id="setBPM">000</span>&nbsp;<span id="currentSetBPM" class="txt-msg">BPM</span>
+            <div class="txt">
+                <div class="pullUpsCounter">
+                    <span id="setPullUps">00</span>
+                </div>
+                <div class="txt-msg-bpm">
+                    <span id="setBPM">000</span>&nbsp;<span id="currentSetBPM" class="txt-msg">BPM</span>
+                </div>
             </div>
             <button id="setDone" class="btnbottom">Hecho</button>
         </div>
@@ -124,21 +140,27 @@
                     <img id="increaseRest" src="./img/increase.png" alt="End rest" />
                 </div>
             </div>
-            <div class="txt-msg-center">
-                <span id="restMinutes">00</span>:<span id="restSeconds">00</span>
-            </div>
-            <div class="txt-msg-bpm">
-                <span id="restBPM">000</span>&nbsp;<span id="restBPMLabel" class="txt-msg">BPM</span>
+            <div class="txt">
+                <div class="pullUpsCounter">
+                    <span id="restMinutes">00</span>:<span id="restSeconds">00</span>
+                </div>
+                <div class="txt-msg-bpm">
+                    <span id="restBPM">000</span>&nbsp;<span id="restBPMLabel" class="txt-msg">BPM</span>
+                </div>
             </div>
             <button id="restDone" class="btnbottom">¡Vamos!</button>
         </div>
     </div>
     <div id="endScreen" class="clock">
         <div class="container">
-            <div class="txt-center">
-                <p class="txt-msg">Enhorabuena. Recuerda descansar al menos un día.</p>
+            <div class="txt">
+            	<div class="txt-no-title-title">
+                	<p class="txt-msg">Enhorabuena.</p>
+                	<p class="txt-msg">Recuerda descansar al menos un día.</p>
+                </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
