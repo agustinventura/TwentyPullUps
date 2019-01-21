@@ -33,3 +33,15 @@ function increasePullUps() {
     pullUps++;
     $("#pullUps").text(pullUps);
 }
+
+function setCurrentLevel() {
+	if (pullUps < 6) {
+		currentLevel = LevelEnum.EASY;
+	} else if (pullUps > 5 && pullUps <10) {
+		currentLevel = LevelEnum.MEDIUM;
+	} else {
+		currentLevel = LevelEnum.HARD;
+    }
+    saveToLocalStorage("pullUpsCurrentLevel", currentLevel);
+	showTestEndScreen();
+}

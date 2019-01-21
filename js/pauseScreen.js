@@ -9,8 +9,8 @@ function showPauseScreen(origin) {
 
 function setPauseScreenListeners() {
 	setRotaryListener(null);
-	setClickListener($("#exit"), exit);
-	setClickListener($("#continue"), hidePauseScreen);
+	setClickListener($("#endSession"), exit);
+	setClickListener($("#continueSession"), hidePauseScreen);
 }
 
 function hidePauseScreen() {

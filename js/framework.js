@@ -7,6 +7,7 @@ function hideAllScreens() {
 	$("#sessionScreen").hide();
 	$("#setScreen").hide();
 	$("#restScreen").hide();
+	$("#endSessionScreen").hide();
 	$("#endScreen").hide();
 }
 
@@ -76,13 +77,30 @@ function hrmListener(hrmInfo) {
 }
 
 function getIntFromLocalStorage(key) {
-	var value = parseInt(localStorage.getItem(key));
+	var value = parseInt(getFromLocalStorage(key));
 	if (isNaN(value)) {
 		value = 0;
 	}
 	return value;
 }
 
+function getFromLocalStorage(key) {
+	return JSON.parse(localStorage.getItem(key));
+}
+
 function saveIntToLocalStorage(key, value) {
-	localStorage.setItem(key, value);
+	saveToLocalStorage(key, value);
+}
+
+function saveToLocalStorage(key, value) {
+	localStorage.setItem(key, JSON.stringify(value));
+}
+
+function preprendZerosIfNeeded(number, size) {
+	var numberLength = number.toString().length;
+	var numberOfZeroes = size - numberLength;
+	for (var i=0; i<numberOfZeroes; i++) {
+		number = "0" + number;
+	}
+	return number;
 }

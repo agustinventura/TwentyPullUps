@@ -15,8 +15,11 @@
     <script src="js/pullUpsScreen.js"></script>
     <script src="js/testScreen.js"></script>
     <script src="js/testEndScreen.js"></script>
+    <script src="js/pauseScreen.js"></script>
+    <script src="js/sessionScreen.js"></script>
     <script src="js/setScreen.js"></script>
     <script src="js/restScreen.js"></script>
+    <script src="js/endSessionScreen.js"></script>
     <script src="js/endScreen.js"></script>
 </head>
 
@@ -91,13 +94,13 @@
     </div>
     <div id="pauseScreen" class="clock">
         <div class="container">
-            <button id="endDay" class="btnleft">Si</button>
+            <button id="endSession" class="btnleft">Si</button>
             <div class="txt">
                 <div class="txt-msg-center">
                     ¿Has terminado? Este día no cuenta.
                 </div>
             </div>
-            <button id="continueDay" class="btnright">No</button>
+            <button id="continueSession" class="btnright">No</button>
         </div>
     </div>
     <div id="sessionScreen" class="clock">
@@ -105,7 +108,7 @@
             <div class="container">
             <div class="txt-no-title">
             	<div class="txt-no-title-title">
-                	<p class="txt-msg">Bienvenido a tu sesión número <span id="dayNumber">0</span>.</p>
+                	<p class="txt-msg">Bienvenido a tu sesión número <span id="sessionNumber">0</span>.</p>
                 	<p class="txt-msg">¿Estás preparado?</p>
                 </div>
             </div>
@@ -166,7 +169,7 @@
             <button id="restDone" class="btnbottom">¡Vamos!</button>
         </div>
     </div>
-    <div id="endScreen" class="clock">
+    <div id="endSessionScreen" class="clock">
         <div class="container">
             <div class="txt">
             	<div class="txt-no-title-title">
@@ -174,6 +177,20 @@
                 	<p class="txt-msg">Recuerda descansar al menos un día.</p>
                 </div>
             </div>
+        </div>
+    </div>
+    <div id="endScreen" class="clock">
+        <div class="container">
+            <button id="repeatLastWeek" class="btntop">Una semana más</button>
+            <div class="txt">
+            	<div class="txt-no-title-title">
+                	<p class="txt-msg">¡Enhorabuena!</p>
+                    <p class="txt-explain">Ya deberías poder hacer 20 dominadas de una vez.</p>
+                    <p class="txt-explain">Si no es así, pulsa arriba.</p>
+                    <p class="txt-explain">Si quieres empezar desde el principio, pulsa debajo.</p>
+                </div>
+            </div>
+            <button id="reset" class="btnbottom">Desde el principio</button>
         </div>
     </div>
 </body>

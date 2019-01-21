@@ -1,10 +1,18 @@
 function showEndScreen() {
 	hideAllScreens();
 	setEndScreenListeners();
-	updateDay();
 	$("#endScreen").show();
 }
 
 function setEndScreenListeners() {
 	setRotaryListener(null);
+	setClickListener($("#repeatLastWeek"), repeatLastWeek);
+	setClickListener($("#reset"), reset);
+}
+
+function reset() {
+	resetDay();
+	resetSession();
+	resetCurrentLevel();
+	init();
 }

@@ -1,4 +1,9 @@
 var day = 0;
+var session = 0;
+var currentLevel = null;
+var set = 0;
+var pullUps = 0;
+
 LevelEnum = {
 		EASY: [
 		       [2, 1, 1, 2, 3], [2, 2, 1, 2, 3], [2, 2, 2, 2, 0], 
@@ -25,48 +30,69 @@ LevelEnum = {
 		       [7, 8, 9, 10, 12], [11, 12, 13, 14, 15], [15, 13, 12, 10, 0]
 		      ],
 }
-var currentLevel = null;
-var pullUps = 0;
-var set = 1;
 
 function init() {
 	setBackKeyListener();
 	hideAllScreens();
 	loadDay();
+	loadSession();
 	loadCurrentLevel();
 	if (day === 0) {
 		showWelcomeScreen();
 	} else if (day === 10) {
 		showTestScreen();
 	} else {
-		set = 1;
-		showSessionScreen();
+		if (session === 18) {
+			showEndScreen();
+		} else {
+			set = 0;
+			showSessionScreen();
+		}
 	}
-}
-
-function setCurrentLevel() {
-	if (pullUps < 6) {
-		currentLevel = LevelEnum.EASY;
-	} else if (pullUps > 5 && pullUps <10) {
-		currentLevel = LevelEnum.MEDIUM;
-	} else {
-		currentLevel = LevelEnum.HARD;
-	}
-	showTestEndScreen();
 }
 
 function loadDay() {
 	day = getIntFromLocalStorage("pullUpsDay");
 }
 
+function loadSession() {
+	session = getIntFromLocalStorage("pullUpsSession");
+}
+
 function loadCurrentLevel() {
-	currentLevel = getIntFromLocalStorage("pullUpsLevel");
+	currentLevel = getFromLocalStorage("pullUpsCurrentLevel");
 }
 
 function updateDay() {
 	day = getIntFromLocalStorage("pullUpsDay");
 	day++;
 	saveIntToLocalStorage("pullUpsDay", day)
+}
+
+function updateSession() {
+	session = getIntFromLocalStorage("pullUpsSession");
+	session++;
+	saveIntToLocalStorage("pullUpsSession", session)
+}
+
+function resetDay() {
+	saveIntToLocalStorage("pullUpsDay", 0)
+}
+
+function resetSession() {
+	saveIntToLocalStorage("pullUpsSession", 0)
+}
+
+function resetCurrentLevel() {
+	saveToLocalStorage("pullUpsCurrentLevel", null)
+}
+
+function repeatLastWeek() {
+	session = session - 3;
+	saveIntToLocalStorage("pullUpsSession", session);
+	day = day - 3;
+	saveIntToLocalStorage("pullUpsDay", day);	
+	init();
 }
 
 $(document).ready(init);
