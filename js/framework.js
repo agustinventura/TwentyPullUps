@@ -49,14 +49,20 @@ function goBack(activeDivId) {
 		case "testEndScreen":
 			init();
 			break;
+		case "sessionScreen":
+			exit();
+			break;
 		case "setScreen":
 			showPauseScreen(activeDivId);
 			break;
-		case "restScreenScreen":
-			restPause(activeDivId);
+		case "restScreen":
+			restPause();
 			break;
 		case "pauseScreen":
 			pauseResume(activeDivId);
+			break;
+		case "endSessionScreen":
+			init();
 			break;
 		case "endScreen":
 			init();
