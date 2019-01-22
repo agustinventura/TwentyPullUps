@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/TwentyPullUps" version="1.0.0" viewmodes="maximized">
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://www.digitalsingular.com/TwentyPullUps" version="1.0.0" viewmodes="maximized">
     <tizen:application id="KL4R7SLx1x.TwentyPullUps" package="KL4R7SLx1x" required_version="2.3.2"/>
+    <author href="http://www.digitalsingular.com/" email="agustinventura@gmail.com">Agustín Ventura Carrasco</author>
     <content src="index.html"/>
     <feature name="http://tizen.org/feature/screen.size.all"/>
     <icon src="icon.png"/>
     <name>TwentyPullUps</name>
+    <name xml:lang="es-es">Twenty Pull Ups te plantea un plan personalizado para que consigas hacer veinte dominadas en veinte sesiones, sin importar tu nivel.</name>
     <tizen:privilege name="http://tizen.org/privilege/healthinfo"/>
     <tizen:privilege name="http://tizen.org/privilege/power"/>
     <tizen:profile name="wearable"/>
