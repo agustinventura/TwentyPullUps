@@ -1,21 +1,21 @@
-/* Colors from Phaedra theme: https://color.adobe.com/es/Phaedra-color-theme-1764754/ 
-* orange: #FF6138
-* yellow: #FFFF9D
-* light-green: #BEEB9F
-* green: #79BD8F
-* dark-green: #00A388
+/* Colors from Pull Up theme: https://color.adobe.com/es/pull-up-color-theme-8465975/ 
+* purple: #664789
+* dark-purple: #453073
+* pink: #F33B85
+* grey: #C3D4DB
+* light-purple: #8C8CB0
 */
 body {
 	font-family: 'Arial';
 	font-weight: 100;
-	color: #FF6138;
+	color: #664789;
 }
 
 .clock {
 	position: relative;
 	width: 360px;
 	height: 360px;
-	background-color: #FFFF9D;
+	background-color: #C3D4DB;
 	border-radius: 50%;
 	overflow-x: hidden;
 }
@@ -39,9 +39,9 @@ body {
 .btntop {
 	box-sizing: border-box;
     text-align: center;
-    color: #FFFF9D;
+    color: #C3D4DB;
     background: none;
-    background-color: #79BD8F;
+    background-color: #8C8CB0;
     text-transform: uppercase;
     border-radius: 50%;
     margin: 0;
@@ -54,19 +54,19 @@ body {
     font-weight: bold;
     padding-top: 100px;
     border-top: 0;
-    border-bottom: 1px solid #00A388;
+    border-bottom: 1px solid #664789;
 }
 
 .btntop:hover {
-	background-color: #00A388;
+	background-color: #664789;
 }
 
 .btnbottom {
 	box-sizing: border-box;
 	text-align: center;
-	color: #FFFF9D;
+	color: #C3D4DB;
 	background: none;
-	background-color: #79BD8F;
+	background-color: #8C8CB0;
 	text-transform: uppercase;
 	border-radius: 50%;
 	margin: 0;
@@ -78,20 +78,20 @@ body {
 	padding: 20px;
 	top: 260px;
 	bottom: 0;
-	border-top: 1px solid #00A388;
+	border-top: 1px solid #664789;
 	border-bottom: 0;
 }
 
 .btnbottom:hover {
-	background-color: #00A388;
+	background-color: #664789;
 }
 
 .btnleft {
 	box-sizing: border-box;
     text-align: right;
-    color: #FFFF9D;
+    color: #C3D4DB;
     background: none;
-    background-color: #79BD8F;
+    background-color: #8C8CB0;
     text-transform: uppercase;
     border-radius: 50%;
     margin: 0;
@@ -101,21 +101,21 @@ body {
     width: 200px;
     font-size: 32px;
     font-weight: bold;
-    border-right: 1px solid #00A388;
+    border-right: 1px solid #664789;
     right: 270px;
     padding-right: 40px;
 }
 
 .btnleft:hover {
-	background-color: #00A388;
+	background-color: #664789;
 }
 
 .btnright {
 	box-sizing: border-box;
     text-align: left;
-    color: #FFFF9D;
+    color: #C3D4DB;
     background: none;
-    background-color: #79BD8F;
+    background-color: #8C8CB0;
     text-transform: uppercase;
     border-radius: 50%;
     margin: 0;
@@ -125,13 +125,13 @@ body {
     width: 200px;
     font-size: 32px;
     font-weight: bold;
-    border-left: 1px solid #00A388;
+    border-left: 1px solid #664789;
     left: 270px;
     padding-left: 20px;
 }
 
 .btnright:hover {
-	background-color: #00A388;
+	background-color: #664789;
 }
 
 .titletop {
@@ -141,9 +141,9 @@ body {
 	height: 200px;
 	text-align: center;
 	border-radius: 50%;
-	border-bottom: 3px solid #00A388;
-	background-color: #79BD8F;
-	color: #FFFF9D;
+	border-bottom: 3px solid #664789;
+	background-color: #8C8CB0;
+	color: #C3D4DB;
 }
 
 .decrease {
