@@ -2,6 +2,8 @@ function showSessionScreen() {
 	hideAllScreens();
 	setSessionScreenListeners();
 	setSessionScreenText();
+	tizen.humanactivitymonitor.start('HRM', hrmListener);
+	tizen.power.request("SCREEN", "SCREEN_NORMAL");
     $("#sessionScreen").show();
 }
 

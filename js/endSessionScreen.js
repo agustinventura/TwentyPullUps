@@ -1,6 +1,8 @@
 function showEndSessionScreen() {
 	hideAllScreens();
 	setEndSessionScreenListeners();
+	tizen.power.release("SCREEN");
+	tizen.humanactivitymonitor.stop('HRM');
 	$("#endSessionScreen").show();
 }
 

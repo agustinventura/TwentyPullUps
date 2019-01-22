@@ -2,7 +2,7 @@ var day = 0;
 var session = 0;
 var currentLevel = null;
 var set = 0;
-var pullUps = 0;
+var pullUps = 1;
 
 LevelEnum = {
 		EASY: [

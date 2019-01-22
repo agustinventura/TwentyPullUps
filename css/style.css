@@ -240,6 +240,16 @@ body {
     text-align: center;
 }
 
+.txt-pause {
+	position: absolute;
+	top: 140px;
+	left: 90px;
+	font-size: 32px;
+    font-weight: bold;
+    width: 50%;
+    text-align: center;
+}
+
 .txt-msg-bpm {
 	font-size: 48px;
 	font-weight: bold;

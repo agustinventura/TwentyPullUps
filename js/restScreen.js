@@ -6,7 +6,7 @@ var restTime = 120;
 
 function showRestScreen() {
 	hideAllScreens();
-	//loadRestEndAudio();
+	loadRestEndAudio();
 	setRestScreenListeners();
 	stopRestChrono();
 	startRest();
@@ -15,8 +15,8 @@ function showRestScreen() {
 
 function loadRestEndAudio() {
     restEndAudio = document.createElement('audio');
-    restEndAudio.src = 'snd/shipbell.mp3';
-    restEndAudio.name = 'shipbell';
+    restEndAudio.src = 'snd/horn.mp3';
+    restEndAudio.name = 'horn';
 }
 
 function setRestScreenListeners() {
@@ -45,7 +45,6 @@ function clearRestState() {
 	stopRestChrono();
 	restEndAudio = null;
 	restSeconds = null;
-	//tizen.power.release("SCREEN");
 }
 
 function stopRestChrono() {
@@ -54,7 +53,6 @@ function stopRestChrono() {
 }
 
 function startRest() {
-	//tizen.power.request("SCREEN", "SCREEN_NORMAL");
 	restTimeOffset = -10;
 	restSeconds = new Date(restTime*1000);
 	startRestChrono();
@@ -68,9 +66,9 @@ function refreshRestMilliseconds() {
 	restSeconds.setMilliseconds(restSeconds.getMilliseconds() + restTimeOffset);
 	if (restSeconds.getMilliseconds() === 0 && restSeconds.getSeconds() === 0 && restSeconds.getMinutes() === 0) {
 		restTimeOffset = 10;
-		//restEndAudio.load();
-		//restEndAudio.play();
-		//navigator.vibrate([1000, 1000, 1000]);
+		restEndAudio.load();
+		restEndAudio.play();
+		navigator.vibrate([1000, 1000, 1000]);
 	}
 	setCurrentRestFormattedTime();
 }
